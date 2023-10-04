@@ -1,0 +1,139 @@
+.addTaskBtn{
+  font-size: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  position:fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #03c9b7;
+  color: #fff;
+  transition: 0.3s;
+}
+.addTaskBtn:hover{
+  background-color: #11E7D3;
+  cursor: pointer;
+}
+
+/* MODAL FOR TASK ADD FORM */
+.modal{
+  color: #fff;
+  background-color: #101D30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:400px;
+  border: 1px solid #03c9b7;
+  border-radius: 10px;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeBtn{
+  position: relative;
+  left:180px;
+  top:10px;
+  font-weight: 800;
+  font-size:1.2rem;
+  background-color: transparent;
+  color:#03c9b7;
+  border:none;
+}
+.closeBtn:hover{
+  cursor: pointer;
+}
+
+/* FORM FOR ADDING TASK */
+.submitTask{
+  display: flex;
+  flex-direction: column;
+  width:200px;
+  gap:20px;
+}
+.submitTask input,
+.submitTask textarea{
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  border: 2px solid rgba(255,255,255,.2);
+  background-color: transparent;
+  border-radius: 40px;
+  padding:15px 20px;
+  color: #fff;
+}
+.submitTask input::placeholder,
+.submitTask textarea::placeholder{
+  color:rgb(39, 78, 141);
+}
+.submitTask input[type=date] {
+  color:rgb(39, 78, 141);
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+::-webkit-calendar-picker-indicator:hover{
+  cursor: pointer;
+}
+.label{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+}
+.submitTask button{
+  font-size:1.4rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #03c9b7;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.submitTask button:hover{
+  cursor: pointer;
+  background-color:#11E7D3;
+}
+
+.renderedTask{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 10px;
+  margin: 30px 20px 0 20px;
+}
+
+
+@media (max-width: 768px) {
+  .addTaskBtn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      font-size: 24px;
+      padding: 10px 16px;
+  }
+
+  .modal {
+      width: 90%;
+  }
+
+  .closeBtn {
+      left: 45%;
+  }
+
+  .submitTask {
+      width: 60%;
+  }
+}
